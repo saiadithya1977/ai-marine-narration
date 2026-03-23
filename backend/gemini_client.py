@@ -17,7 +17,7 @@ def generate_narration(prompt):
 
     text = response.text.strip()
 
-    
+    # Remove code blocks if Gemini returns them
     text = text.replace("```json", "").replace("```", "").strip()
 
     return json.loads(text)
