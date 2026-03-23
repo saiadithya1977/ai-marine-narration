@@ -1,0 +1,29 @@
+{
+  "environment": {
+    "type": "coral_reef",
+    "time_of_day": "midday",
+    "temperature_c": 27
+  },
+  "actors": [
+    {
+      "id": "turtle_1",
+      "species": "Sea Turtle",
+      "behaviors": ["movement"]
+    },
+    {
+      "id": "turtle_2",
+      "species": "Sea Turtle",
+      "behaviors": ["movement"]
+    },
+    {
+      "id": "parrotfish_1",
+      "species": "Parrotfish",
+      "behaviors": ["movement"]
+    },
+    {
+      "id": "parrotfish_2",
+      "species": "Parrotfish",
+      "behaviors": ["movement"]
+    }
+  ]
+}

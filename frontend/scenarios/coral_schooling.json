@@ -1,0 +1,34 @@
+{
+  "environment": {
+    "type": "coral_reef",
+    "time_of_day": "afternoon",
+    "temperature_c": 26
+  },
+  "actors": [
+    {
+      "id": "clownfish_1",
+      "species": "Clownfish",
+      "behaviors": ["movement"]
+    },
+    {
+      "id": "clownfish_2",
+      "species": "Clownfish",
+      "behaviors": ["movement"]
+    },
+    {
+      "id": "clownfish_3",
+      "species": "Clownfish",
+      "behaviors": ["movement"]
+    },
+    {
+      "id": "clownfish_4",
+      "species": "Clownfish",
+      "behaviors": ["movement"]
+    },
+    {
+      "id": "sea_turtle_1",
+      "species": "Sea Turtle",
+      "behaviors": ["movement"]
+    }
+  ]
+}

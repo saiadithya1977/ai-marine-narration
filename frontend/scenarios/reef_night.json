@@ -1,0 +1,30 @@
+{
+  "environment": {
+    "type": "coral_reef",
+    "time_of_day": "night",
+    "temperature_c": 24
+  },
+  "actors": [
+    {
+      "id": "reef_shark_1",
+      "species": "Reef Shark",
+      "behaviors": ["movement", "hunting"],
+      "target": "fish_1"
+    },
+    {
+      "id": "fish_1",
+      "species": "Fish",
+      "behaviors": ["movement"]
+    },
+    {
+      "id": "fish_2",
+      "species": "Fish",
+      "behaviors": ["movement"]
+    },
+    {
+      "id": "octopus_1",
+      "species": "Octopus",
+      "behaviors": ["movement"]
+    }
+  ]
+}

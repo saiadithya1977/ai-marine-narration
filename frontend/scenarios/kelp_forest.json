@@ -1,0 +1,30 @@
+{
+  "environment": {
+    "type": "kelp_forest",
+    "time_of_day": "morning",
+    "temperature_c": 16
+  },
+  "actors": [
+    {
+      "id": "seal_1",
+      "species": "Seal",
+      "behaviors": ["movement", "hunting"],
+      "target": "fish_1"
+    },
+    {
+      "id": "fish_1",
+      "species": "Fish",
+      "behaviors": ["movement"]
+    },
+    {
+      "id": "fish_2",
+      "species": "Fish",
+      "behaviors": ["movement"]
+    },
+    {
+      "id": "fish_3",
+      "species": "Fish",
+      "behaviors": ["movement"]
+    }
+  ]
+}
