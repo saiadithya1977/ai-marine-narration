@@ -160,18 +160,61 @@ Generated narration:
 
 ## How to Run
 
-### Backend
+## Backend Setup and Run
+
+### 1. Navigate to backend
 
 cd backend
+
+### 2. Create virtual environment (recommended)
+
+python -m venv venv
+
+Activate:
+
+Windows:
+
+venv\Scripts\activate
+
+Mac/Linux:
+
+source venv/bin/activate
+
+---
+
+### 3. Install dependencies
+
+pip install fastapi uvicorn python-dotenv google-genai
+
+---
+
+### 4. Configure environment variables
+
+Create a `.env` file in the backend directory:
+
+GEMINI_API_KEY=your_api_key_here
+
+---
+
+### 5. Run the backend server
+
 uvicorn main:app --reload
 
-### Frontend
+The API will be available at:
 
-## scenario csv files are already inside frontend folder.
+http://127.0.0.1:8000
+
+---
+
+### 6. Run frontend
+
+Open the frontend file:
 
 frontend/index.html (Open with Live server extension easy)
 
-Select a scenario or upload a JSON file, then generate narration.
+Upload a scenario or select a preset and generate narration.
+
+## scenario csv files are already inside frontend folder.
 
 ---
 
