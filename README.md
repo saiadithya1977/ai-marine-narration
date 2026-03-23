@@ -24,6 +24,8 @@ The LLM is used strictly as an explanation layer, while all ecosystem analysis r
 
 ---
 
+## The current JSON format used in the prototype is a simplified abstraction of the expected simulation data. It allows development of the event-detection and narration pipeline without requiring direct integration with the Unity-based simulation.
+
 ## Key Features
 
 - Event detection from ecosystem state
@@ -178,6 +180,45 @@ Select a scenario or upload a JSON file, then generate narration.
 - Event windowing and temporal reasoning
 
 ---
+
+
+## Continuous Data Flow and Event Derivation
+
+In the full simulation environment, ecosystem data will be received as a continuous stream of frame-level updates rather than static snapshots.
+
+Each frame is expected to provide structured state information such as:
+
+- species identity and count
+- position (x, y, z)
+- velocity and movement direction
+- basic state (e.g., activity, health)
+- environmental context and nearby entities
+
+The current prototype uses a simplified JSON format to represent this data in a static form. This abstraction allows development and testing of the reasoning pipeline without requiring a live simulation.
+
+In the full system, the pipeline will be extended as follows:
+
+1. Frame Stream Processing  
+   Incoming simulation frames will be processed continuously.
+
+2. Event Detection  
+   Events will be derived from changes in state over time. For example:
+   - decreasing distance between predator and prey → predator interaction  
+   - clustering of same species → group behavior  
+   - consistent directional movement → migration or movement patterns  
+
+3. Temporal Event Window  
+   Events will be aggregated over short time windows to:
+   - avoid repetitive narration  
+   - capture meaningful transitions  
+
+4. Event Filtering  
+   Previously detected or low-importance events will be filtered out.
+
+5. Narration Generation  
+   Only new and significant events will be passed to the LLM to generate concise and context-aware narration.
+
+This design ensures that the system can scale from static snapshots to real-time simulation while maintaining clarity and avoiding redundant explanations.
 
 ## Conclusion
 
