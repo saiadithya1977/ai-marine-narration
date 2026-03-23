@@ -167,6 +167,8 @@ uvicorn main:app --reload
 
 ### Frontend
 
+## scenario csv files are already inside frontend folder.
+
 frontend/index.html (Open with Live server extension easy)
 
 Select a scenario or upload a JSON file, then generate narration.
